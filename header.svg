@@ -183,7 +183,7 @@
            x="375" y="100" width="210" height="280" 
            clip-path="url(#arcCoreAvatarClip)"
            preserveAspectRatio="xMidYMin slice"
-           xlink:href="./avatar.jpg"/>
+           xlink:href="./avatar.jpeg"/>
 
     <!-- Monogram Plaque Anchor -->
     <polygon points="400,248 560,248 574,272 386,272" fill="#070c17" stroke="#00f2fe" stroke-width="1.2"/>
