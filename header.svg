@@ -14,21 +14,21 @@
       <stop offset="100%" stop-color="#0284c7"/>
     </linearGradient>
 
-    <!-- Authentic Directional Phosphor Trailing Beam (Downward sweep decay) -->
+    <!-- Loki Phosphor Trailing Laser Beam -->
     <linearGradient id="lokiPhosphorTrail" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#10b981" stop-opacity="0"/>
       <stop offset="35%" stop-color="#10b981" stop-opacity="0.04"/>
-      <stop offset="75%" stop-color="#22c55e" stop-opacity="0.18"/>
-      <stop offset="96%" stop-color="#4ade80" stop-opacity="0.45"/>
-      <stop offset="100%" stop-color="#a7f3d0" stop-opacity="0.8"/>
+      <stop offset="75%" stop-color="#22c55e" stop-opacity="0.2"/>
+      <stop offset="96%" stop-color="#4ade80" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#a7f3d0" stop-opacity="0.9"/>
     </linearGradient>
 
-    <!-- High-Definition Horizontal Phosphor Scanlines -->
+    <!-- CRT Horizontal Scanline Texture -->
     <pattern id="laserScanGrid" width="100%" height="3" patternUnits="userSpaceOnUse">
       <line x1="0" y1="0" x2="960" y2="0" stroke="#047857" stroke-width="0.8" opacity="0.35"/>
     </pattern>
 
-    <!-- Structural Hairline Grid -->
+    <!-- Tactical Dot Grid -->
     <pattern id="tacticalGrid" width="24" height="24" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="0.8" fill="rgba(56, 189, 248, 0.08)"/>
       <path d="M 24 0 L 0 0 0 24" fill="none" stroke="rgba(255, 255, 255, 0.015)" stroke-width="0.8"/>
@@ -81,21 +81,17 @@
         100% { stroke-dashoffset: 0; }
       }
 
-      /* 1. CONTINUOUS UNBROKEN VERTICAL SWEEP (Never stalls or freezes) */
+      /* Continuous Unbroken Vertical Sweep (Top layer over all elements) */
       .fluid-scanner-sweep {
         animation: smoothVerticalScan 3.6s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
         mix-blend-mode: screen;
       }
       @keyframes smoothVerticalScan {
-        0% {
-          transform: translateY(-80px);
-        }
-        100% {
-          transform: translateY(480px);
-        }
+        0% { transform: translateY(-80px); }
+        100% { transform: translateY(480px); }
       }
 
-      /* 2. HIGH-FREQUENCY HORIZONTAL CRT JITTER (Glitch happens sideways without pausing vertical motion) */
+      /* Horizontal Sync Glitch Effect */
       .glitch-displacement-strip {
         animation: hSyncJitter 0.24s steps(3, start) infinite;
       }
@@ -107,7 +103,6 @@
         100% { transform: translateX(0px); opacity: 0.9; }
       }
 
-      /* Secondary Micro-Flicker in the laser ribbon */
       .laser-flicker {
         animation: phosphorFluctuation 1.8s ease-in-out infinite alternate;
       }
@@ -177,18 +172,18 @@
     <circle cx="480" cy="180" r="62" stroke="#38bdf8" stroke-width="2.5" stroke-dasharray="24 16" class="arc-ring-segments"/>
     <circle cx="480" cy="180" r="57" stroke="#00f2fe" stroke-width="1.2" opacity="0.7"/>
 
-    <!-- Cropped Avatar Image Center Frame -->
+    <!-- Avatar Image (Direct GitHub Profile Endpoint) -->
     <circle cx="480" cy="180" r="56" fill="#080c14"/>
     <image id="userPortrait" 
-           x="375" y="100" width="210" height="280" 
+           x="424" y="124" width="112" height="112" 
            clip-path="url(#arcCoreAvatarClip)"
-           preserveAspectRatio="xMidYMin slice"
-          xlink:href="https://raw.githubusercontent.com/LingeshR-17/LingeshR-17/main/avatar.jpeg"/>
+           preserveAspectRatio="xMidYMid slice"
+           xlink:href="https://github.com/LingeshR-17.png"/>
 
     <!-- Monogram Plaque Anchor -->
     <polygon points="400,248 560,248 574,272 386,272" fill="#070c17" stroke="#00f2fe" stroke-width="1.2"/>
     <text x="480" y="265" text-anchor="middle" class="font-hud" font-size="14" font-weight="900" fill="#f8fafc" letter-spacing="3">LINGESH R</text>
-    <text x="480" y="284" text-anchor="middle" class="font-mono" font-size="9" fill="#00f2fe">@Lingeshprt17 • CIT CHENNAI</text>
+    <text x="480" y="284" text-anchor="middle" class="font-mono" font-size="9" fill="#00f2fe">@LingeshR-17 • CIT CHENNAI</text>
   </g>
 
   <!-- ================= LEFT COMMAND WING ================= -->
@@ -306,19 +301,12 @@
     <text x="864" y="142" class="font-mono" font-size="9" fill="#475569" text-anchor="end">STATUS: READY FOR MISSION DISPATCH</text>
   </g>
 
-  <!-- ================= AUTHENTIC OPTICAL & PHOSPHOR SCANNER (TOP LAYER) ================= -->
+  <!-- ================= VOLUMETRIC LOKI GREEN SCANNER (TOP LAYER) ================= -->
   <g class="fluid-scanner-sweep" pointer-events="none">
-    <!-- 1. Deep Phosphor Comet Wake (trailing upwards like an electron beam) -->
     <rect x="0" y="0" width="960" height="90" fill="url(#lokiPhosphorTrail)"/>
-
-    <!-- 2. Fine CRT Horizontal Scanline Texture in the beam -->
     <rect x="0" y="10" width="960" height="80" fill="url(#laserScanGrid)"/>
-
-    <!-- 3. Razor Cutting-Edge Laser Line (the active focal sweep) -->
     <line x1="0" y1="90" x2="960" y2="90" stroke="#4ade80" stroke-width="2" class="laser-flicker" style="filter: drop-shadow(0 0 8px #22c55e);"/>
     <line x1="0" y1="90" x2="960" y2="90" stroke="#ffffff" stroke-width="0.8" opacity="0.9"/>
-
-    <!-- 4. High-Speed Horizontal Sync Glitch Elements (pure horizontal jitter, no vertical freeze) -->
     <g class="glitch-displacement-strip">
       <rect x="60" y="86" width="160" height="5" fill="#86efac" opacity="0.9" style="filter: drop-shadow(0 0 6px #22c55e);"/>
       <rect x="340" y="88" width="240" height="3" fill="#ffffff" opacity="0.95"/>
