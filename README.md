@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./header.svg?v=2" alt="Lingesh R // Quantum Temporal HUD" width="100%" />
+  <img src="./header-v2.svg?v=2" alt="Lingesh R // Quantum Temporal HUD" width="100%" />
 </div>
 
 <br/>
